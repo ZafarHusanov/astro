@@ -6,8 +6,8 @@ const { t, lang } = Astro.props;
 <header class="flex justify-between items-center py-4 border-b">
   <nav class="space-x-4">
     <a href={`/${lang}/`}>{t.navHome}</a>
-    <!-- <a href={`/${lang}/about`}>{t.navAbout}</a>
-    <a href={`/${lang}/blog/first-post`}>{t.navBlog}</a> -->
+    <a href={`/${lang}/about`}>{t.navAbout}</a>
+    <a href={`/${lang}/blog/first-post`}>{t.navBlog}</a>
   </nav>
   <LanguageSwitcher lang={lang} />
 </header>
