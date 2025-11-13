@@ -3,11 +3,10 @@ import LanguageSwitcher from './LanguageSwitcher.astro';
 const { t, lang } = Astro.props;
 ---
 <header class="flex justify-between items-center py-4 border-b">
-<meta name="description" content="Best SEO.">
   <nav class="space-x-4">
-    <a href={`/${lang}/`}>{t.navHome}</a>
-    <a href={`/${lang}/about`}>{t.navAbout}</a>
-    <a href={`/${lang}/blog/first-post`}>{t.navBlog}</a>
+    <a href={`/${lang}/`} style="font-size: 24px">{t.navHome}</a>
+    <a href={`/${lang}/about`} style="font-size: 24px">{t.navAbout}</a>
+    <a href={`/${lang}/blog/first-post`} style="font-size: 24px">{t.navBlog}</a>
   </nav>
   <LanguageSwitcher lang={lang} />
 </header>
