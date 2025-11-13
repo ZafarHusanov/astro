@@ -13,15 +13,37 @@ const { t, lang } = Astro.props;
 
 
 <header class="flex justify-between items-center py-4 border-b">
-  <nav class="space-x-4" aria-label={t.mainNavigation}>
-    {/* Havola yuzasini kattalashtirish uchun padding (py-2 px-3) qo'shildi */}
-    <a href={`/${lang}/`} class="py-2 px-3 inline-block rounded hover:bg-gray-100">{t.navHome}</a>
-    <a href={`/${lang}/about`} class="py-2 px-3 inline-block rounded hover:bg-gray-100">{t.navAbout}</a>
-    <a href={`/${lang}/blog/first-post`} class="py-2 px-3 inline-block rounded hover:bg-gray-100">{t.navBlog}</a>
-  </nav>
-  
-  {/* LanguageSwitcher ichidagi havolalarni ham shunday kattalashtirish kerak */}
-  <nav aria-label={t.languageSwitching}>
-    <LanguageSwitcher lang={lang} />
-  </nav>
+    
+    {/* Bosh Navigatsiya: Semantik jihatdan to'g'ri va Touch Target kengaytirildi */}
+    <nav class="space-x-1" aria-label={t.mainNavigation}>
+      
+      {/* py-2 px-3 sinflari Touch Targetni 48x48 pikselgacha kattalashtirishga yordam beradi */}
+      <a 
+        href={`/${lang}/`} 
+        class="py-2 px-3 inline-block rounded hover:bg-gray-100"
+      >
+        {t.navHome}
+      </a>
+      
+      <a 
+        href={`/${lang}/about`} 
+        class="py-2 px-3 inline-block rounded hover:bg-gray-100"
+      >
+        {t.navAbout}
+      </a>
+      
+      <a 
+        href={`/${lang}/blog/first-post`} 
+        class="py-2 px-3 inline-block rounded hover:bg-gray-100"
+      >
+        {t.navBlog}
+      </a>
+    </nav>
+    
+    {/* Til Almashtirgich uchun alohida Navigatsiya konteyneri */}
+    <nav aria-label={t.languageSwitching}>
+      {/* LanguageSwitcher komponenti ichidagi havolalar ham Touch Target qoidasiga amal qilishi kerak */}
+      <LanguageSwitcher lang={lang} client:load /> 
+    </nav>
+    
 </header>
