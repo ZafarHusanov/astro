@@ -1,0 +1,35 @@
+---
+import fs from 'fs';
+import path from 'path';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import uz from '../../../i18n/uz.json';
+
+// 🔹 build paytida barcha sluglarni olish
+export async function getStaticPaths() {
+  const dir = path.resolve('src/content/uz');
+  const files = fs.readdirSync(dir);
+
+  // har bir .md fayldan slug olish
+  return files
+    .filter(f => f.endsWith('.md'))
+    .map(file => ({
+      params: { slug: file.replace('.md', '') },
+    }));
+}
+
+// 🔹 slug orqali postni olish
+const { slug } = Astro.params;
+const postModule = await import(`../../../content/uz/${slug}.md`);
+const { Content, frontmatter } = postModule;
+---
+
+<BaseLayout title={frontmatter.title} lang="uz">
+  <Header t={uz} lang="uz" slot="header" />
+  <article class="mt-6 prose">
+    <h1>{frontmatter.title}</h1>
+    
+    <h1>{frontmatter.date}</h1>
+    <Content />
+  </article>
+</BaseLayout>

@@ -1,0 +1,7 @@
+---
+const { lang } = Astro.props;
+const otherLang = lang === 'uz' ? 'en' : 'uz';
+---
+<a href={`/${otherLang}/`} class="text-blue-500">
+  {otherLang.toUpperCase()}
+</a>

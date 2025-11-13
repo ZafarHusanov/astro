@@ -1,0 +1,16 @@
+---
+const { title, lang, children } = Astro.props;
+---
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans max-w-3xl mx-auto p-4">
+    <slot name="header" />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
