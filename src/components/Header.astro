@@ -2,6 +2,7 @@
 import LanguageSwitcher from './LanguageSwitcher.astro';
 const { t, lang } = Astro.props;
 ---
+
 <header class="flex justify-between items-center py-4 border-b">
   <nav class="space-x-4">
     <a href={`/${lang}/`}>{t.navHome}</a>
@@ -9,56 +10,30 @@ const { t, lang } = Astro.props;
     <a href={`/${lang}/blog/first-post`}>{t.navBlog}</a>
   </nav>
   <LanguageSwitcher lang={lang} />
-  
-<img
-  src="/images/t2.jpg"
-  alt="Asosiy sahifa hero rasmi"
-  width="1200"
-  height="600"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-  style="width:100%;height:auto;object-fit:cover;"
-/>
-<img
-  src="/images/t2.jpg"
-  alt="Asosiy sahifa hero rasmi"
-  width="1200"
-  height="600"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-  style="width:100%;height:auto;object-fit:cover;"
-/>
-<img
-  src="/images/t2.jpg"
-  alt="Asosiy sahifa hero rasmi"
-  width="1200"
-  height="600"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-  style="width:100%;height:auto;object-fit:cover;"
-/>
-<img
-  src="/images/t2.jpg"
-  alt="Asosiy sahifa hero rasmi"
-  width="1200"
-  height="600"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-  style="width:100%;height:auto;object-fit:cover;"
-/>
-<img
-  src="/images/t2.jpg"
-  alt="Asosiy sahifa hero rasmi"
-  width="1200"
-  height="600"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-  style="width:100%;height:auto;object-fit:cover;"
-/>
-
 </header>
+
+<!-- Hero bo‘lim — LCP uchun -->
+<section class="hero">
+  <img
+    src="/images/t2.jpg"
+    alt="Asosiy sahifa hero rasmi"
+    width="1200"
+    height="600"
+    loading="eager"
+    fetchpriority="high"
+    decoding="async"
+    style="width:100%;height:auto;object-fit:cover;"
+  />
+</section>
+
+<style>
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 600px; /* CLS oldini oladi */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
