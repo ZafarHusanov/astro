@@ -9,13 +9,17 @@ const { t, lang } = Astro.props;
     <a href={`/${lang}/blog/first-post`}>{t.navBlog}</a>
   </nav>
   <LanguageSwitcher lang={lang} />
-  <img
+  
+<img
   src="/images/t2.jpg"
-  alt="Bosh sahifa rasmi"
+  alt="Asosiy sahifa hero rasmi"
   width="1200"
   height="600"
+  loading="eager"
   fetchpriority="high"
   decoding="async"
+  style="width:100%;height:auto;object-fit:cover;"
 />
+
 
 </header>
