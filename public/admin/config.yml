@@ -1,5 +1,5 @@
 backend:
-  name: git-gatewa       # Netlify Identity + Git Gateway
+  name: git-gateway       # Netlify Identity + Git Gateway
   branch: main            # asosiy branch
   commit_messages:        # commit xabarlari
     create: "Create {{collection}} {{slug}}"
