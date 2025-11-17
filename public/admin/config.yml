@@ -2,6 +2,8 @@ backend:
   name: github       # Netlify Identity + Git Gateway
   repo: ZafarHusanov/astro
   branch: main            # asosiy branch
+  base_url: https://github.com
+  auth_base_url: https://github.com
   commit_messages:        # commit xabarlari
     create: "Create {{collection}} {{slug}}"
     update: "Update {{collection}} {{slug}}"
