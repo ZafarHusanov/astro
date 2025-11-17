@@ -1,6 +1,5 @@
 backend:
   name: git-gatewa       # Netlify Identity + Git Gateway
-  repo: ZafarHusanov/astro
   branch: main            # asosiy branch
   commit_messages:        # commit xabarlari
     create: "Create {{collection}} {{slug}}"
