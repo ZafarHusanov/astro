@@ -1,8 +1,8 @@
 import type { APIRoute } from "astro";
 import fetch from "node-fetch";
 
-const clientId = import.meta.env.GITHUB_CLIENT_ID!;
-const clientSecret = import.meta.env.GITHUB_CLIENT_SECRET!;
+const clientId = 'Ov23liWBillPJHIpfzWy';
+const clientSecret = 'd59c3f282a4a5e23690f417e6d0c1d0e98341404';
 
 export const get: APIRoute = async ({ request }) => {
   const url = new URL(request.url);
