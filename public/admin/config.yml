@@ -2,8 +2,9 @@ backend:
   name: github
   repo: 'ZafarHusanov/astro' # ⬅️ GitHub repo manzilingizni kiriting
   branch: main
+  auth_scope: repo
   
-  
+
   commit_messages:
     create: "Create {{collection}} {{slug}}"
     update: "Update {{collection}} {{slug}}"
