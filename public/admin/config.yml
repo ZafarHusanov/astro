@@ -3,7 +3,7 @@ backend:
   repo: ZafarHusanov/astro
   branch: main
   auth_scope: repo
-  base_url: https://astro-mauve-six.vercel.app/
+  base_url: https://astro-mauve-six.vercel.app
   auth_endpoint: /api/auth
   cms_label_prefix: cms
 
