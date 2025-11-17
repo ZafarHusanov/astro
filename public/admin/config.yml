@@ -1,18 +1,14 @@
 backend:
   name: github
-  repo: 'ZafarHusanov/astro' # ⬅️ GitHub repo manzilingizni kiriting
+  repo: ZafarHusanov/astro
   branch: main
   auth_scope: repo
-  
-
-  commit_messages:
-    create: "Create {{collection}} {{slug}}"
-    update: "Update {{collection}} {{slug}}"
-    delete: "Delete {{collection}} {{slug}}"
+  base_url: https://astro-mauve-six.vercel.app/
+  auth_endpoint: /api/auth
+  cms_label_prefix: cms
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
-publish_mode: editorial_workflow
 
 collections:
   # English Pages
