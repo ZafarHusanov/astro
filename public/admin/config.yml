@@ -10,6 +10,8 @@ backend:
   auth_type: implicit
   app_id: Ov23liDJrEd5YmFeBag5
 
+publish_mode: editorial_workflow
+
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
