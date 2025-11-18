@@ -3,13 +3,18 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"astro dev\"",
+    "build": "tinacms build && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^5.15.5",
-    "decap-cms": "^3.9.0"
+    "decap-cms": "^3.9.0",
+    "tinacms": "^2.9.5"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.12.4",
+    "@types/node": "^24.10.1"
   }
 }
